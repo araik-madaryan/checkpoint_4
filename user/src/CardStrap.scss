@@ -1,0 +1,35 @@
+.CardStrap {
+  text-align:center;
+  margin-top: 60px;
+  h1 {
+    margin-bottom: 40px;
+  }
+  .align-cards {
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  .card-body {
+    width: 350px;
+    text-align:center;
+    margin: 0 auto;
+    float: none;
+  }
+  .spectacles {
+    height: auto;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  button {
+    width: 250px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .modal-content {
+    .modal-header {
+      .modal-img {
+        height: 100px;
+      }
+    }
+  }
+}
