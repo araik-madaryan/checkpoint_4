@@ -1,0 +1,27 @@
+.DisplayBooking {
+  text-align:center;
+  margin-top: 60px;
+  .align-cards {
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  .col-sm-4 {
+    margin-bottom: 40px;
+  }
+  .card-body {
+    width: 350px;
+    text-align:center;
+    margin: 0 auto;
+    float: none;
+    padding: none;
+  }
+  .Buttons {
+    display: flex;
+    justify-content: space-around;
+    input {
+      width: 250px;
+      margin-top: 20px;
+    }
+  }
+  
+}

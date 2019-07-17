@@ -1,0 +1,24 @@
+.CardStrap {
+  text-align:center;
+  margin-top: 60px;
+  .col-sm-4 {
+    margin-bottom: 40px;
+  }
+  .card-body {
+    width: 350px;
+    text-align:center;
+    margin: 0 auto;
+    float: none;
+  }
+  .spectacles {
+    height: auto;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  button {
+    width: 250px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
