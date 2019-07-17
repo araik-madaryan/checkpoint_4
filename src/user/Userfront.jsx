@@ -1,16 +1,16 @@
 import React from 'react';
 import Accueil from './Accueil';
-import FunctionCard from './FunctionCard';
+import Spectacle from './Spectacle';
 import Formulaire from './Formulaire';
 
-function App() {
+function Userfront() {
   return (
-    <div className="App">
+    <div className="Userfront">
       <Accueil />
-      <FunctionCard />
+      <Spectacle />
       <Formulaire />
     </div>
   );
 }
 
-export default App;
+export default Userfront;

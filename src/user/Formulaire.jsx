@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 import './Formulaire.scss';
 
 class Formulaire extends Component {
@@ -27,9 +28,14 @@ class Formulaire extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(this.state)
-    }).then(res => res.json())
-    .then((data) => console.log(data))
-    .catch(err => console.log(err))
+    })
+    .then((res) => {
+      if (res.error) {
+        NotificationManager.error('', 'Échec de la réservation', 4000);
+      } else {
+        NotificationManager.success('', 'Réservation réussie', 4000);
+      }
+    });
   }
 
   render() {
@@ -98,6 +104,7 @@ class Formulaire extends Component {
             />
           </div>
         </form>
+        <NotificationContainer />
       </div>
       
     );

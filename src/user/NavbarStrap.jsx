@@ -32,10 +32,10 @@ class NavbarStrap extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">Nos Spectacles</NavLink>
+                <NavLink href="/card">Nos Spectacles</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/">Réservation</NavLink>
+                <NavLink href="/formulaire">Réservation</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

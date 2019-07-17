@@ -1,12 +1,8 @@
 .CardStrap {
   text-align:center;
   margin-top: 60px;
-  h1 {
+  .col-sm-4 {
     margin-bottom: 40px;
-  }
-  .align-cards {
-    justify-content: space-around;
-    margin: 0 auto;
   }
   .card-body {
     width: 350px;
@@ -24,12 +20,5 @@
     width: 250px;
     text-align: center;
     margin: 0 auto;
-  }
-  .modal-content {
-    .modal-header {
-      .modal-img {
-        height: 100px;
-      }
-    }
   }
 }
