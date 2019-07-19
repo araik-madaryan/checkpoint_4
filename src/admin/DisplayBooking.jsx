@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardTitle, Col } from 'reactstrap';
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+import { NotificationManager, NotificationContainer } from 'react-notifications';
 import './DisplayBooking.scss';
 
 class DisplayBooking extends Component {
@@ -22,9 +22,9 @@ class DisplayBooking extends Component {
     })
     .then((res) => {
       if (res.error) {
-        NotificationManager.error('', 'Échec de la suppression', 4000);
+        NotificationManager.error('', 'Échec de la suppression', 3000);
       } else {
-        NotificationManager.success('', 'Suppression réussie', 4000);
+        NotificationManager.success('', 'Suppression réussie', 3000);
       }
     });
   }
@@ -32,7 +32,7 @@ class DisplayBooking extends Component {
   render() {
     const { firstname, lastname, email, tel, spectacle } = this.props;
     return (
-      <div className="DisplayBooking">
+      <div className="DisplayBooking" id="reservation">
         <Col sm="4">
           <Card body>
             <CardTitle><h1>{spectacle}</h1></CardTitle>

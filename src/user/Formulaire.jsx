@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+import { NotificationManager, NotificationContainer } from 'react-notifications';
 import './Formulaire.scss';
 
 class Formulaire extends Component {
@@ -31,9 +31,9 @@ class Formulaire extends Component {
     })
     .then((res) => {
       if (res.error) {
-        NotificationManager.error('', 'Échec de la réservation', 4000);
+        NotificationManager.error('', 'Échec de la publication', 3000);
       } else {
-        NotificationManager.success('', 'Réservation réussie', 4000);
+        NotificationManager.success('', 'Publication réussie', 3000);
       }
     });
   }
@@ -41,7 +41,7 @@ class Formulaire extends Component {
   render() {
     const { firstname, lastname, email, tel, spectacle } = this.state;
     return (
-      <div className="Formulaire">
+      <div className="Formulaire" id="formulaire">
         <form onSubmit={this.handleSubmit}>
           <h1>Réservation</h1>
           <label htmlFor="firstname">Prénom</label>

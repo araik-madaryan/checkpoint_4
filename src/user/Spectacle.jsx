@@ -24,7 +24,7 @@ class Spectacle extends Component {
   render() {
     const { spectacle } = this.state;
     return (
-      <div className="Spectacle">
+      <div className="Spectacle" id="card">
         <h1>Nos Spectacles</h1>
         <Row className="align-items">
           {spectacle.map((spectacle, i) => <CardStrap {...spectacle} key={i} />)}

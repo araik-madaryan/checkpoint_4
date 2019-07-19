@@ -1,17 +1,30 @@
 .Formulaire {
+  margin-top: 60px;
+  height: 95vh;
   text-align: center;
-  margin-top: 10px;
   h1 {
     margin-bottom: 40px;
   }
   input, select {
     width: 80%;
     text-align:center;
+    border-radius: 10px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-color:whitesmoke;
   }
   label {
     margin-top: 20px;
   }
   .button {
-    margin-top: 30px;
+    margin-top: 40px;
+    input {
+      border-radius: 4px;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #2C4076;
+      border-color: #370B3E;  
+    }
   }
 }
