@@ -27,7 +27,7 @@ class SpectacleAdmin extends Component {
       <div className="SpectacleAdmin">
         <h1>Modifier un spectacle</h1>
         <Row className="align-items">
-          {spectacle.map((spectacle, i) => <ModifySpectacle {...spectacle} key={i} />)}
+          {spectacle.map((spectacle, i) => <ModifySpectacle {...spectacle} key={i} id={spectacle.id} />)}
         </Row>
       </div>
     );

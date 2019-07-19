@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NotificationManager, NotificationContainer } from 'react-notifications';
 import './NewSpectacle.scss';
 
 class NewSpectacle extends Component {
@@ -27,15 +28,20 @@ class NewSpectacle extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(this.state)
-    }).then(res => res.json())
-    .then((data) => console.log(data))
-    .catch(err => console.log(err))
+    })
+    .then((res) => {
+      if (res.error) {
+        NotificationManager.error('', 'Échec de la publication', 3000);
+      } else {
+        NotificationManager.success('', 'Publication réussie', 3000);
+      }
+    });
   }
 
   render() {
     const { title, image, description, date, price } = this.state;
     return (
-      <div className="NewSpectacle">
+      <div className="NewSpectacle" id="nouveau">
         <form onSubmit={this.handleSubmit}>
           <h1>Nouveau spectacle</h1>
           <label htmlFor="title">Titre</label>
@@ -97,6 +103,7 @@ class NewSpectacle extends Component {
             />
           </div>
         </form>
+        <NotificationContainer />
       </div>
       
     );

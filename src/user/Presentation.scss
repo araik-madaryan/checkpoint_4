@@ -1,0 +1,31 @@
+.Presentation {
+  text-align: center;
+  margin-top: 60px;
+  height: 95vh;
+  h1 {
+    margin-bottom: 40px;
+  }
+  .Paragraphe {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .Carousel-size {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 40vw;
+    height: auto;
+  }
+  .color-select {
+    color: #5C1069;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Presentation {
+    margin-bottom: 140px;
+    .Carousel-size {
+      width: 100vw;
+    }
+  }
+}

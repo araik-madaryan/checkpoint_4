@@ -33,29 +33,16 @@ class NavbarStrap extends Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink>
-                <Link
-                  activeClass="active"
-                  to="accueil"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration= {500}>
-                  Accueil
-                </Link>
-              </NavLink>
-            </NavItem>
-            <NavItem>
+              <NavItem>
                 <NavLink>
                   <Link
                     activeClass="active"
-                    to="presentation"
+                    to="nouveau"
                     spy={true}
                     smooth={true}
                     offset={-70}
                     duration= {500}>
-                    Notre Histoire
+                    Nouveau
                   </Link>
                 </NavLink>
               </NavItem>
@@ -63,12 +50,12 @@ class NavbarStrap extends Component {
                 <NavLink>
                   <Link
                     activeClass="active"
-                    to="card"
+                    to="modifier"
                     spy={true}
                     smooth={true}
                     offset={-70}
                     duration= {500}>
-                    Nos Spectacles
+                    Modifier
                   </Link>
                 </NavLink>
               </NavItem>
@@ -76,25 +63,12 @@ class NavbarStrap extends Component {
                 <NavLink>
                   <Link
                     activeClass="active"
-                    to="formulaire"
+                    to="reservation"
                     spy={true}
                     smooth={true}
                     offset={-70}
                     duration= {500}>
                     Réservation
-                  </Link>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink>
-                  <Link
-                    activeClass="active"
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration= {500}>
-                    Contact
                   </Link>
                 </NavLink>
               </NavItem>

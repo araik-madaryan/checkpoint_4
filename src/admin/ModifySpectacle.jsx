@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import { Card, Button, CardTitle, Col } from 'reactstrap';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { NotificationManager, NotificationContainer } from 'react-notifications';
+import './ModifySpectacle.scss';
 
 class ModifySpectacle extends Component {
   constructor(props) {
     super(props);
+    const { title, image, description, date, price } = this.props;
     this.state = {
       modal: false,
-      title: '',
-      image: '',
-      description: '',
-      date: '',
-      price: '',
+      title,
+      image,
+      description,
+      date,
+      price,
     };
   }
 
@@ -27,14 +30,36 @@ class ModifySpectacle extends Component {
     }));
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { id } = this.props;
+    const { title, image, description, date, price } = this.state;
+    const spectacle = { title, image, description, date, price };
+    fetch(`http://localhost:3000/api//modifyspec/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(spectacle)
+    })
+    .then((res) => {
+      if (res.error) {
+        NotificationManager.error('', 'Échec de la modification', 3000);
+      } else {
+        NotificationManager.success('', 'Modification réussie', 3000);
+      }
+    });
+  }
+
   render() {
     const { modal } = this.state;
-    const { title, image, description, date, price } = this.props;
+    const { title, image, description, date, price } = this.state;
     return (
-      <div className="CardStrap">
+      <div className="ModifySpectacle" id="modifier">
           <Col sm="6">
             <Card body>
-              <CardTitle>{title}</CardTitle>
+              <CardTitle className="title">{title}</CardTitle>
               <img className="spectacles" src={image} alt="spectacle" />
               <Button onClick={this.toggle}>Modifier</Button>
             </Card>
@@ -44,7 +69,6 @@ class ModifySpectacle extends Component {
           <ModalHeader toggle={this.toggle}>{title}</ModalHeader>
           <ModalBody>
             <form onSubmit={this.handleSubmit}>
-              <h1>Nouveau spectacle</h1>
               <label htmlFor="title">Titre</label>
               <div>
                 <input
@@ -95,20 +119,21 @@ class ModifySpectacle extends Component {
                   name="price" 
                 />
               </div>
+              <div>
+                <input
+                  className="button"
+                  type="submit"
+                  value="Appliquer"
+                  name="Appliquer" 
+                />
+              </div>
             </form>
           </ModalBody>
           <ModalFooter>
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="Appliquer"
-                name="Appliquer" 
-              />
-              </div>
             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>
+        <NotificationContainer />
       </div>
     );
   }

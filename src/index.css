@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Mountains+of+Christmas&display=swap');
+
+h1 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: #7A489C;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

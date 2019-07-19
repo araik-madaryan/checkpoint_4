@@ -1,0 +1,49 @@
+.Contact{
+  height: 70vh;
+  text-align: center;
+  h1 {
+    margin-bottom: 40px;
+  }
+  .button {
+    border-radius: 4px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #5E8BC2;
+    border-color: #4C7BB4;  
+  }
+  .fa {
+    color:grey;
+    font-size: 40px;
+    color: #5E8BC2
+  }
+  .fa-phone {
+    color: #31995C;
+  }
+  .fa-envelope {
+    font-size: 30px;
+    color: #A2A4A3;
+  }
+  .Numero {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .Mail {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .Link-network {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    width: 15vw;
+  }
+  .a {
+    border: 2px solid #5E8BC2;
+    border-radius: 10px;
+  }
+}

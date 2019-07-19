@@ -24,7 +24,7 @@ class CardStrap extends Component {
       <div className="CardStrap">
           <Col sm="6">
             <Card body>
-              <CardTitle>{title}</CardTitle>
+              <CardTitle className="title">{title}</CardTitle>
               <img className="spectacles" src={image} alt="spectacle" />
               <Button onClick={this.toggle}>Découvrir le spectacle</Button>
             </Card>
